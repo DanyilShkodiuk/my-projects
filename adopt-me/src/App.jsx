@@ -25,7 +25,7 @@ const App = () => {
             <Link to="/">Adopt ME!</Link>
           </header>
           <Routes>
-            <Route path="/details/:id" element={<Details />} />5
+            <Route path="/details/:id" element={<Details />} />
             <Route path="/" element={<SearchParams />} />
           </Routes>
         </AdoptedPetContext.Provider>
