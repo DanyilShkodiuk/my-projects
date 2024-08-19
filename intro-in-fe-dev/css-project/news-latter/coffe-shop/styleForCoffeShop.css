@@ -102,3 +102,29 @@ body {
 .item-option {
   margin-bottom: 5px;
 }
+/*Payment*/
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.user-input-label {
+  color: #885a2d;
+  background-color: #eee1d5;
+  font-size: 11px;
+  position: absolute;
+  left: 25px;
+  top: -7px;
+  padding: 0 2px;
+}
+.user-input {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px #885a2d solid;
+  padding: 8px;
+  border-radius: 100px;
+  width: 100%;
+  text-indent: 18px;
+  font-size: 18px;
+}
+.short-input {
+  max-width: 200px;
+}
