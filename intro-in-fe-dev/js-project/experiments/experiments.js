@@ -1,19 +1,19 @@
 /*Way of pulling components from the DOM*/
 const arrayofDOMFucn = [
+  document.getElementsByClassName("DOMfunc"),
   document.querySelector("p"), //By querySelector
   document.getElementById("p1"), //By getElementById
   document.getElementsByClassName("p2")[0], //getElementsByClassName
-  document.querySelector("div"),
+  document.getElementsByClassName("str-num-bool")[0],
+  document.getElementsByClassName("if")[0],
 ];
-const targetDiv = arrayofDOMFucn[3];
-
 const montlyRent = 500;
 const yearlyRent = montlyRent * 12;
-let br = document.createElement("br");
+
 //Results
-arrayofDOMFucn[0].textContent = `BY QUERRY SELECTOR : document.querySelector() => ${yearlyRent}`; //6000
-arrayofDOMFucn[1].textContent = `BY ID: document.getElementById() => ${yearlyRent}`; //6000
-arrayofDOMFucn[2].textContent = `BY CLASS NAME: getElementsByClassName() => ${yearlyRent}`; //6000
+arrayofDOMFucn[1].textContent = `BY QUERRY SELECTOR : document.querySelector() => ${yearlyRent}`; //6000
+arrayofDOMFucn[2].textContent = `BY ID: document.getElementById() => ${yearlyRent}`; //6000
+arrayofDOMFucn[3].textContent = `BY CLASS NAME: getElementsByClassName() => ${yearlyRent}`; //6000
 
 /*numbers strings and booleans */
 const myName = "Danyil Shkodiuk";
@@ -21,24 +21,41 @@ const doubleQuotes = "this is 'fine'";
 const singleQuote = "i don't have a problem with 1 qoute";
 const someNum = 12;
 const TrueBoolean = true;
-const newHeading = document.createElement("h3");
-newHeading.textContent = "New Heading Text";
 
 //Result
-arrayofDOMFucn[3].innerHTML = `
-<h3 class="snb">Strings</h3>
-  simple string => 
-    ${myName} <br/> 
-  Nesting different quoutes inside each other or it wont work => 
-    ${doubleQuotes} <br/> 
-  Use \\ to escape single quotes or use double quotes instead => 
-    ${singleQuote} <br />
-  <h3 class="snb">Numbers/Integers</h3>
-  Some number =>  
-    ${someNum} <br />
+arrayofDOMFucn[4].innerHTML = `
+  <p>
+    simple string =>${myName}
+  </p>
+  <p>  
+    Nesting different quoutes inside each other or it wont work => ${doubleQuotes}
+  </p>
+  <p>  
+    Use \\ to escape single quotes or use double quotes instead => ${singleQuote}
+  </p>
+
+<h3 class="snb">Numbers/Integers</h3>
+  <p>
+  Some number =>  ${someNum}
+  </p>
+
   <h3 class="snb">Boolean</h3>
-  Boolean with true value =>
-    ${TrueBoolean}
+  <p>Boolean with true value => ${TrueBoolean}</p>
 `;
-const referenceElement = targetDiv.querySelectorAll(``)[0];
-targetDiv.insertBefore(newHeading, referenceElement);
+
+/*Control Flow: If statment */
+const skyIsBlue = false;
+if (skyIsBlue) {
+  arrayofDOMFucn[5].innerHTML = `<p>Sky is Blue !</p>`;
+} else {
+  arrayofDOMFucn[5].innerHTML = `<p>Sky is ... not blue?</p>`;
+}
+
+const friendsAtYourParty = 10;
+if (friendsAtYourParty === 0) {
+  arrayofDOMFucn[5].innerHTML = `<p>Cool, now I have a lot of nachos to myself.</p>`;
+} else if (friendsAtYourParty <= 4) {
+  arrayofDOMFucn[5].innerHTML = `<p>Perfect amount to play some Mario Kart.</p>`;
+} else {
+  arrayofDOMFucn[5].innerHTML = `<p>Wooooo turn on the dance music!</p>`;
+}
