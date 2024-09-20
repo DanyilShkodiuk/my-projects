@@ -19,17 +19,26 @@ arrayofDOMFucn[2].textContent = `BY CLASS NAME: getElementsByClassName() => ${ye
 const myName = "Danyil Shkodiuk";
 const doubleQuotes = "this is 'fine'";
 const singleQuote = "i don't have a problem with 1 qoute";
+const someNum = 12;
+const TrueBoolean = true;
 const newHeading = document.createElement("h3");
 newHeading.textContent = "New Heading Text";
 
 //Result
 arrayofDOMFucn[3].innerHTML = `
+<h3 class="snb">Strings</h3>
   simple string => 
     ${myName} <br/> 
-  nesting different quoutes inside each other or it wont work => 
+  Nesting different quoutes inside each other or it wont work => 
     ${doubleQuotes} <br/> 
   Use \\ to escape single quotes or use double quotes instead => 
-    ${singleQuote}
+    ${singleQuote} <br />
+  <h3 class="snb">Numbers/Integers</h3>
+  Some number =>  
+    ${someNum} <br />
+  <h3 class="snb">Boolean</h3>
+  Boolean with true value =>
+    ${TrueBoolean}
 `;
 const referenceElement = targetDiv.querySelectorAll(``)[0];
 targetDiv.insertBefore(newHeading, referenceElement);
