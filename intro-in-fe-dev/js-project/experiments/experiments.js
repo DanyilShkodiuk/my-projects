@@ -1,20 +1,33 @@
 /*Way of pulling components from the DOM*/
-const arrayofDOMFucn = [
-  document.getElementsByClassName("DOMfunc"),
-  document.querySelector("p"), //By querySelector
-  document.getElementById("p1"), //By getElementById
-  document.getElementsByClassName("p2")[0], //getElementsByClassName
-  document.getElementsByClassName("str-num-bool")[0],
-  document.getElementsByClassName("if")[0],
-  document.getElementsByClassName("loop")[0],
-];
+// const arrayofDOMFucn = [
+//   document.querySelector(".DOMfunc"),
+//   document.querySelector("p"), //By querySelector
+//   document.getElementById("p1"), //By getElementById
+//   document.getElementsByClassName("p2")[0], //getElementsByClassName
+//   document.querySelector(".str-num-bool"),
+//   document.querySelector(".if"),
+//   document.querySelector(".loop"),
+// ];
+
+const arrayofDOMFucn = {
+  DOMfunc: document.querySelector(".DOMfunc"),
+  p: document.querySelector("p"),
+  p1: document.getElementById("p1"),
+  p2: document.getElementsByClassName("p2")[0],
+  strNumBool: document.querySelector(".str-num-bool"),
+  if: document.querySelector(".if"),
+  loop: document.querySelector(".loop"),
+};
 const montlyRent = 500;
 const yearlyRent = montlyRent * 12;
 
 //Results
-arrayofDOMFucn[1].textContent = `BY QUERRY SELECTOR : document.querySelector() => ${yearlyRent}`; //6000
-arrayofDOMFucn[2].textContent = `BY ID: document.getElementById() => ${yearlyRent}`; //6000
-arrayofDOMFucn[3].textContent = `BY CLASS NAME: getElementsByClassName() => ${yearlyRent}`; //6000
+// arrayofDOMFucn[1].textContent = `BY QUERRY SELECTOR : document.querySelector() => ${yearlyRent}`; //6000
+// arrayofDOMFucn[2].textContent = `BY ID: document.getElementById() => ${yearlyRent}`; //6000
+// arrayofDOMFucn[3].textContent = `BY CLASS NAME: getElementsByClassName() => ${yearlyRent}`; //6000
+arrayofDOMFucn.p.innerHTML = `BY QUERRY SELECTOR : document.querySelector() => ${yearlyRent}`; //6000
+arrayofDOMFucn.p1.innerHTML = `BY ID: document.getElementById() => ${yearlyRent}`; //6000
+arrayofDOMFucn.p2.innerHTML = `BY CLASS NAME: getElementsByClassName() => ${yearlyRent}`; //6000
 
 /*numbers strings and booleans */
 const myName = "Danyil Shkodiuk";
@@ -24,7 +37,7 @@ const someNum = 12;
 const TrueBoolean = true;
 
 //Result
-arrayofDOMFucn[4].innerHTML = `
+arrayofDOMFucn.strNumBool.innerHTML = `
   <p>
     simple string =>${myName}
   </p>
@@ -47,18 +60,18 @@ arrayofDOMFucn[4].innerHTML = `
 /*Control Flow: If statment */
 const skyIsBlue = false;
 if (skyIsBlue) {
-  arrayofDOMFucn[5].innerHTML = `<p>Sky is Blue !</p>`;
+  arrayofDOMFucn.if.innerHTML = `<p>Sky is Blue !</p>`;
 } else {
-  arrayofDOMFucn[5].innerHTML = `<p>Sky is ... not blue?</p>`;
+  arrayofDOMFucn.if.innerHTML = `<p>Sky is ... not blue?</p>`;
 }
 
 const friendsAtYourParty = 10;
 if (friendsAtYourParty === 0) {
-  arrayofDOMFucn[5].innerHTML = `<p>Cool, now I have a lot of nachos to myself.</p>`;
+  arrayofDOMFucn.if.innerHTML = `<p>Cool, now I have a lot of nachos to myself.</p>`;
 } else if (friendsAtYourParty <= 4) {
-  arrayofDOMFucn[5].innerHTML = `<p>Perfect amount to play some Mario Kart.</p>`;
+  arrayofDOMFucn.if.innerHTML = `<p>Perfect amount to play some Mario Kart.</p>`;
 } else {
-  arrayofDOMFucn[5].innerHTML = `<p>Wooooo turn on the dance music!</p>`;
+  arrayofDOMFucn.if.innerHTML = `<p>Wooooo turn on the dance music!</p>`;
 }
 
 /*Loops*/
