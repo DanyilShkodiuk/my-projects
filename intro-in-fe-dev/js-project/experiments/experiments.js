@@ -163,3 +163,35 @@ const chirp = () => {
   console.log("chipr!");
 };
 chirp();
+
+/*Builtins */
+
+const sentence = "ThIs HaS wEiRd CaSiNg On It";
+const lowerCase = sentence.toLowerCase(); //toLowerCase()
+const upperCase = sentence.toUpperCase(); //toUpperCase()
+console.log(lowerCase + "\n" + upperCase);
+
+let string = "Hi my name is Danyil";
+string = string.substring(3 /*<-start*/, 5 /*<-end*/); //extract strng
+console.log(string);
+
+//int
+let number = 5.3;
+let roundedNumber = Math.round(number);
+console.log(roundedNumber);
+roundedNumber = Math.floor(number);
+console.log(roundedNumber);
+roundedNumber = Math.ceil(number);
+console.log(roundedNumber);
+
+const randomNum = Math.random();
+console.log(randomNum);
+
+// want to see if a string contains another string?
+const testStringOne = "The quick brown fox jumps over the lazy dog";
+const testStringTwo =
+  "Mirror, mirror on the wall, don't say it cause I know I'm cute";
+const stringToLookFor = "cute";
+
+console.log(testStringOne.includes(stringToLookFor));
+console.log(testStringTwo.includes(stringToLookFor));
