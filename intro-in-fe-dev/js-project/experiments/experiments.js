@@ -288,3 +288,62 @@ console.log(ME.getAddress());
 /*using .bind fix issue with pulling out thing out of obj*/
 const pulledOutGetAddress = ME.getAddress.bind(ME);
 console.log(pulledOutGetAddress());
+
+/*Arrays*/
+
+const daysOfTheWeek = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+
+console.log(daysOfTheWeek);
+console.log(daysOfTheWeek[0]);
+console.log(daysOfTheWeek[1]);
+console.log(daysOfTheWeek[6]);
+
+const primeNumbers = [1, 2, 3, 5, 7, 11, 13, 17];
+console.log(primeNumbers.length);
+console.log(primeNumbers.join("|"));
+
+const courses = [
+  { teacher: "Will Sentance", course: "JavaScript: The Hard Parts" },
+  { teacher: "Sarah Drasner", course: "Intro to Vue" },
+  { teacher: "Brian Holt", course: "Complete Intro to React" },
+  { teacher: "Steve Kinney", course: "Build Your Own Programming Language" },
+  { teacher: "Scott Moss", course: "Intro to Node.js" },
+];
+console.log("array before .push(): " + courses.length);
+
+courses.push({ teacher: "Jen Kramer", course: "Getting Started with CSS" }); //adding thing to array
+courses[2].course = "Complete Intro to Databases"; //chaging specific thing in array
+console.log("array before .pop(): " + courses.length);
+
+const lastCourse = courses.pop(); // remove last thing in array
+console.log(lastCourse);
+console.log("array after .pop(): " + courses.length);
+
+//iterating trough array
+
+const cities = [
+  "Seattle",
+  "San Francisco",
+  "Salt Lake City",
+  "Amsterdam",
+  "Hong Kong",
+];
+
+//method 1
+for (let i = 0; i < cities.length; i++) {
+  console.log(i + "." + cities[i]);
+}
+
+//method 2
+
+cities.forEach((i, city) => {
+  console.log(city + "." + i);
+});
