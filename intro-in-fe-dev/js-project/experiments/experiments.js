@@ -135,7 +135,12 @@ const myHomeState = "Kyiv";
 const myHomeCountry = "Ukraine";
 
 function logOutMyHome(city, state, country) {
+  //add return to make it work
   return `You're from ${city}, ${state}, ${country}`;
+  /*
+  or declare it in console.log inside func
+  console.log(`You're from ${city}, ${state}, ${country}`);
+  */
 }
 console.log(logOutMyHome(myHomeCity, myHomeState, myHomeCountry));
 
