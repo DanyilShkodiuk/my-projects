@@ -104,3 +104,57 @@ for (let i = 0; i < 10; i++) {
 }
 
 console.log(`AFTER FOR LOOP: ${friends}`);
+
+/*Functions*/
+
+function addTwo(number /*<-paramenter*/) {
+  return number + 2;
+}
+
+const finalAnswer = addTwo(5);
+console.log(`first result of addTwo function: ${finalAnswer}`);
+
+const otherAnswer = addTwo(10);
+console.log(
+  `second result of addTwo function \nbut declared in other var: ${otherAnswer}`
+);
+//other function with more operators
+
+function greet(firstName, lastName, honorific, greeting) {
+  return `${greeting} ${honorific} ${lastName}! 
+  I’m extremely pleased you could join us, ${firstName}!\nI hope you enjoy your stay, ${honorific} ${lastName}.`;
+}
+
+console.log(greet("Brian", "Holt", "Lord", "Salutations"));
+console.log(greet("Jack", "Sparrow", "Captain", "A-hoy"));
+
+//working with global var using params in func
+
+const myHomeCity = "Brovary";
+const myHomeState = "Kyiv";
+const myHomeCountry = "Ukraine";
+
+function logOutMyHome(city, state, country) {
+  return `You're from ${city}, ${state}, ${country}`;
+}
+console.log(logOutMyHome(myHomeCity, myHomeState, myHomeCountry));
+
+//funcs declaretions
+
+//1.default func
+function bark() {
+  console.log("woof!");
+}
+bark();
+
+//2.declare func in var
+const meow = function () {
+  console.log("meow :3");
+};
+meow();
+
+//3.arrow func =>
+const chirp = () => {
+  console.log("chipr!");
+};
+chirp();
