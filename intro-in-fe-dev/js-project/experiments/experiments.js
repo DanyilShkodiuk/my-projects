@@ -260,3 +260,31 @@ const me = {
 
 console.log(me.name.first);
 console.log(me.location.state);
+
+//Context
+
+const ME = {
+  name: {
+    first: "Brian",
+    last: "Holt",
+  },
+  location: {
+    streetNumber: 500,
+    street: "Fakestreet",
+    city: "Seattle",
+    state: "WA",
+    zipCode: 55555,
+    country: "USA",
+  },
+  getAddress() {
+    return `${this.name.first} ${this.name.last}
+${this.location.streetNumber} ${this.location.street}
+${this.location.city}, ${this.location.state} ${this.location.zipCode}
+${this.location.country}`;
+  },
+};
+console.log(ME.getAddress());
+
+/*using .bind fix issue with pulling out thing out of obj*/
+const pulledOutGetAddress = ME.getAddress.bind(ME);
+console.log(pulledOutGetAddress());
