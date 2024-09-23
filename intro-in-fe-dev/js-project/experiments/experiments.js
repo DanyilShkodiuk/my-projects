@@ -6,6 +6,7 @@ const arrayofDOMFucn = [
   document.getElementsByClassName("p2")[0], //getElementsByClassName
   document.getElementsByClassName("str-num-bool")[0],
   document.getElementsByClassName("if")[0],
+  document.getElementsByClassName("loop")[0],
 ];
 const montlyRent = 500;
 const yearlyRent = montlyRent * 12;
@@ -59,3 +60,47 @@ if (friendsAtYourParty === 0) {
 } else {
   arrayofDOMFucn[5].innerHTML = `<p>Wooooo turn on the dance music!</p>`;
 }
+
+/*Loops*/
+
+let friends = 0; //variable created
+
+friends = friends + 1;
+friends = friends + 1;
+friends = friends + 1;
+console.log("FRIENDS:" + friends);
+
+//WHILE LOOP
+friends = 0; //var reset
+
+console.log(`BEFORE WHILE LOOP: ${friends}`);
+
+while (friends < 10) {
+  friends = friends + 1; //while this is TRUE - concatinate (++)
+  console.log(friends);
+}
+
+console.log(`AFTER WHILE LOOP: ${friends}`);
+
+//operations on variables
+
+friends = 0; //var reset
+
+friends = friends + 1; //default addition
+friends += 1; //assigment addition operator
+friends++; // adds 1 after var
+++friends; //adds 1 before var
+console.log(`after all additions result is: ${friends}`);
+
+//FOR LOOP
+
+friends = 0; //var reset
+
+console.log(`BEFORE FOR LOOP: ${friends}`);
+
+for (let i = 0; i < 10; i++) {
+  friends++;
+  console.log(friends);
+}
+
+console.log(`AFTER FOR LOOP: ${friends}`);
