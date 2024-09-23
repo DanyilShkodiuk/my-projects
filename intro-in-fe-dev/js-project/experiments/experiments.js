@@ -195,3 +195,68 @@ const stringToLookFor = "cute";
 
 console.log(testStringOne.includes(stringToLookFor));
 console.log(testStringTwo.includes(stringToLookFor));
+
+/*Objects*/
+
+//case 1
+const person = {
+  name: "Danyil Shkodiuk",
+  city: "Poznan",
+  state: "GP",
+  favFood: "🍖",
+  wantsSteakRightNow: true,
+  numOfSteakWanted: 100,
+};
+
+console.log(person);
+console.log(person.name);
+console.log(person["name"]); //sama line as before, better use previous one
+//case 2
+const person1 = {
+  name: "Angie",
+  ageRange: "25-35",
+};
+const person2 = {
+  name: "Francesca",
+  ageRange: "65-75",
+};
+
+function suggestMusic(person) {
+  if (person.ageRange === "25-35") {
+    console.log("We think you will like Daft Punk.");
+  } else if (person.ageRange === "65-75") {
+    console.log("You are obviously going to like Johnny Cash.");
+  } else {
+    console.log(
+      "Uh, maybe try David Bowie? Everyone likes David Bowie, right?"
+    );
+  }
+}
+suggestMusic(person1);
+suggestMusic(person2);
+
+//case 3
+const dog = {
+  name: "Luna",
+  speak: () => {
+    console.log("wof wof");
+  },
+};
+dog.speak();
+
+//nested objs
+
+const me = {
+  name: {
+    first: "Brian",
+    last: "Holt",
+  },
+  location: {
+    city: "Seattle",
+    state: "WA",
+    country: "USA",
+  },
+};
+
+console.log(me.name.first);
+console.log(me.location.state);
