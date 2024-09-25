@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.calc {
+  height: auto;
+  display: grid;
+  font-size: 40px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  grid-template-areas:
+    "screen screen screen screen"
+    "double double arrowLeft divide"
+    "seven eight nine multiplication"
+    "four five six minus"
+    "one two three plus"
+    "triple triple triple equal";
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 80px 100px 100px 100px 100px 100px 100px;
+}
+
+.screen {
+  grid-area: screen;
+  padding: 20px 5px;
+  font-weight: 100;
+}
+.double {
+  grid-area: double;
+}
+.arrowLeft {
+  grid-area: arrowLeft;
+  font-size: 60px;
+}
+.divide {
+  grid-area: divide;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+.multiplication {
+  grid-area: multiplication;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.plus {
+  grid-area: plus;
+}
+.equal {
+  grid-area: equal;
+}
+.triple {
+  grid-area: triple;
+}
+.grey {
+  background-color: #d8d9db;
+  color: black;
+}
+.orange {
+  background-color: #df974c;
+}
+.screen {
+  background-color: black;
+}
+.orange,
+.screen {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.orange,
+.grey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(69, 66, 66);
+  cursor: pointer;
+}
+.grey:hover {
+  background-color: #ebebeb;
+}
+.grey:active {
+  background-color: #bbbcbe;
+}
+.orange:hover {
+  background-color: #dfb07e;
+}
+.orange:active {
+  background-color: #dd8d37;
+}
