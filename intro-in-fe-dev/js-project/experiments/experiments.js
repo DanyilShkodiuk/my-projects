@@ -1,11 +1,11 @@
 const arrayofDOMFucn = {
-  DOMfunc: document.querySelector(".DOMfunc"),
-  p: document.querySelector("p"),
-  p1: document.getElementById("p1"),
-  p2: document.getElementsByClassName("p2")[0],
   strNumBool: document.querySelector(".str-num-bool"),
-  if: document.querySelector(".if"),
+  DOMfunc: document.querySelector(".DOMfunc"),
   loop: document.querySelector(".loop"),
+  if: document.querySelector(".if"),
+  p: document.querySelector("p"),
+  p2: document.getElementsByClassName("p2")[0],
+  p1: document.getElementById("p1"),
 };
 const montlyRent = 500;
 const yearlyRent = montlyRent * 12;
@@ -344,4 +344,35 @@ for (let i = 0; i < cities.length; i++) {
 
 cities.forEach((i, city) => {
   console.log(city + "." + i);
+});
+
+/*Events and Listeners*/
+//using click event
+const eventButton = document.querySelector(".event-button");
+eventButton.addEventListener("click", () => {
+  alert("Hello!");
+  console.log("lol");
+});
+
+//using keyup event
+
+const input = document.querySelector(".input-to-copy");
+const p = document.querySelector(".p-to-copy-to");
+
+input.addEventListener("keyup", () => {
+  p.innerText = input.value;
+});
+
+//using change event
+const colorBox = document.querySelector(".color-box");
+const colorInput = document.querySelector(".color-input");
+
+colorInput.addEventListener("change", () => {
+  colorBox.style.backgroundColor = colorInput.value;
+});
+
+//event bubbling - using higher evelements in hierarchy
+const butCon = document.querySelector(".button-conteiner");
+butCon.addEventListener("click", () => {
+  alert(`You clicked on button ${event.target.innerText}`);
 });
