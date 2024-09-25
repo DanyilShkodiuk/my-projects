@@ -1,14 +1,3 @@
-/*Way of pulling components from the DOM*/
-// const arrayofDOMFucn = [
-//   document.querySelector(".DOMfunc"),
-//   document.querySelector("p"), //By querySelector
-//   document.getElementById("p1"), //By getElementById
-//   document.getElementsByClassName("p2")[0], //getElementsByClassName
-//   document.querySelector(".str-num-bool"),
-//   document.querySelector(".if"),
-//   document.querySelector(".loop"),
-// ];
-
 const arrayofDOMFucn = {
   DOMfunc: document.querySelector(".DOMfunc"),
   p: document.querySelector("p"),
