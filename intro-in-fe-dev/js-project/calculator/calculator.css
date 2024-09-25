@@ -8,6 +8,7 @@ body {
 .calc {
   height: auto;
   display: grid;
+  width: 400px;
   font-size: 40px;
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
@@ -19,7 +20,7 @@ body {
     "one two three plus"
     "triple triple triple equal";
   grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: 80px 100px 100px 100px 100px 100px 100px;
+  grid-template-rows: 80px 100px 100px 100px 100px 100px;
 }
 
 .screen {
