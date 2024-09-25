@@ -10,10 +10,6 @@ const arrayofDOMFucn = {
 const montlyRent = 500;
 const yearlyRent = montlyRent * 12;
 
-//Results
-// arrayofDOMFucn[1].textContent = `BY QUERRY SELECTOR : document.querySelector() => ${yearlyRent}`; //6000
-// arrayofDOMFucn[2].textContent = `BY ID: document.getElementById() => ${yearlyRent}`; //6000
-// arrayofDOMFucn[3].textContent = `BY CLASS NAME: getElementsByClassName() => ${yearlyRent}`; //6000
 arrayofDOMFucn.p.innerHTML = `BY QUERRY SELECTOR : document.querySelector() => ${yearlyRent}`; //6000
 arrayofDOMFucn.p1.innerHTML = `BY ID: document.getElementById() => ${yearlyRent}`; //6000
 arrayofDOMFucn.p2.innerHTML = `BY CLASS NAME: getElementsByClassName() => ${yearlyRent}`; //6000
