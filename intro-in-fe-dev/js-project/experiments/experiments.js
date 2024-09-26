@@ -208,7 +208,7 @@ const person = {
 
 console.log(person);
 console.log(person.name);
-console.log(person["name"]); //sama line as before, better use previous one
+console.log(person["name"]); //same line as before, better use previous one
 //case 2
 const person1 = {
   name: "Angie",
