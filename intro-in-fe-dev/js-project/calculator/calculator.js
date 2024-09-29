@@ -70,8 +70,18 @@ calc.addEventListener("click", (event) => {
     }
   };
 
+  const remLastNum = () => {
+    if (classList.contains("arrowLeft")) {
+      screen.innerText = screen.innerText.substring(
+        0,
+        screen.innerText.length - 1
+      );
+    }
+  };
+
   renderNumsOnScreen(); // Render numbers on the screen
   handleOperation(); // Handle operations (+, -, *, ÷)
-  calculateResult(); // Perform calculation when '=' is clicked
+  calculateResult();
+  remLastNum(); // Perform calculation when '=' is clicked
   reset(); // Handle reset (C button)
 });
