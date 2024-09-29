@@ -72,10 +72,14 @@ calc.addEventListener("click", (event) => {
 
   const remLastNum = () => {
     if (classList.contains("arrowLeft")) {
-      screen.innerText = screen.innerText.substring(
-        0,
-        screen.innerText.length - 1
-      );
+      if (screen.innerText.length === 1) {
+        screen.innerText = "0";
+      } else {
+        screen.innerText = screen.innerText.substring(
+          0,
+          screen.innerText.length - 1
+        );
+      }
     }
   };
 
