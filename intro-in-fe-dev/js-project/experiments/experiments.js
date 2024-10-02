@@ -386,18 +386,16 @@ const doggos = document.getElementById("dog-target");
 function addNewDoggo() {
   //1.make request to the server using fetch(API_END_POINT)
   const promise = fetch(DOG_URL);
-
   //when response/promise come back to client do processing inside 1st .then()
   promise
     .then(function (response) {
-      const processingPromise = response.text();
+      const processingPromise = response.json();
       return processingPromise;
     })
     //in 2nd .then we do manipulation with request
     .then(function (processedResponce) {
-      const dogObject = JSON.parse(processedResponce); //making string JSON response into an obj
       const img = document.createElement("img"); //creating img component
-      img.src = dogObject.message; // adding url (message) for img
+      img.src = processedResponce.message; // adding url (message) for img
       img.alt = "Cute Doggo"; //adding alt text
       doggos.appendChild(img); //adding img into the obj
     })
