@@ -405,3 +405,20 @@ function addNewDoggo() {
     });
 }
 document.getElementById("dog-btn").addEventListener("click", addNewDoggo);
+
+//Async Await
+
+const DOG_URL1 = "https://dog.ceo/api/breeds/image/random";
+
+const doggos1 = document.getElementById("dog-target1");
+
+//1. Creating async function
+async function addNewDoggo1() {
+  const promise = await fetch(DOG_URL1); //2.Awaits response
+  const processedResponce = await promise.json(); //3.Awaits turned into JSON
+  const img = document.createElement("img");
+  img.src = processedResponce.message;
+  img.alt = "Cute Doggo";
+  doggos1.appendChild(img);
+}
+document.getElementById("dog-btn1").addEventListener("click", addNewDoggo1);
